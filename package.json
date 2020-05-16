@@ -1,0 +1,22 @@
+{
+  "name": "wiki-rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "private": true,
+  "scripts": {
+    "start": "tsnd --transpileOnly src/index.ts",
+    "debug": "tsnd --respawn --transpileOnly --inspect=9232 src/index.ts",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
+    "build": "tsc",
+    "tsnd": "tsnd"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "ts-node": "^8.9.1",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.8.3"
+  },
+  "author": "ragulmathawa@gmail.com",
+  "license": "ISC"
+}

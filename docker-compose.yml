@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  typescript-node-starter:
+    build:
+      context: .
+      dockerfile: Dockerfile.debug
+    image: typescript-node-starter:debug
+    environment: 
+      - NODE_ENV=development
+    restart: unless-stopped
+    env_file: debug.env
+    ports:
+      - "9232:9232"
+    volumes:
+      - .:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+    networks:
+      - debug-network
+    command: npm run debug
+networks:
+    debug-network:
+        driver: bridge
+volumes:
+    node_modules:  
