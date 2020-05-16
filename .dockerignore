@@ -120,3 +120,9 @@ node_modules
 build
 *.env
 .vscode
+.git
+Dockerfile*
+docker-compose*.yml
+docker-compose*.yaml
+Makefile
+*.MD
